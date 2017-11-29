@@ -3,6 +3,5 @@ class ProductsController < ApplicationController
   end
 
   def add
-    cart << @item.id
   end
 end
