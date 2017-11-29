@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  get '/', to: 'products#add'
-  root 'products#add'
+  get '/', to: 'products#index'
+  root 'products#index'
 end
