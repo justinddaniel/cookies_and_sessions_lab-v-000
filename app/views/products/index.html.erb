@@ -7,8 +7,18 @@
 
 <h3> Add another item to your cart: </h3>
 <br>
-<form action="/add" method="POST">
-  <label>Item name:</label><br>
-  <input type="text" name="product"><br>
-  <input type="submit" value="add to cart">
-</form>
+<%= form_tag products_path do %>
+  <label>product</label><br>
+  <%= text_field_tag 'product' %><br>
+  <%= submit_tag "add to cart" %>
+<% end %>
+
+<%= form_tag posts_path do %>
+  <label>Post title:</label><br>
+  <%= text_field_tag :'post[title]' %><br>
+ 
+  <label>Post description:</label><br>
+  <%= text_area_tag :'post[description]' %><br>
+ 
+  <%= submit_tag "Submit Post" %>
+<% end %>
