@@ -7,10 +7,10 @@
 
 <h3> Add another item to your cart: </h3>
 <br>
-<%= form_tag products_path do %>
-  <label>product</label><br>
-  <%= text_field_tag 'product' %><br>
-  <%= submit_tag "add to cart" %>
-<% end %>
-
+<form action="/add" method="POST">
+  <label>Item name:</label><br>
+  <input type="text" name="product"><br>
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="submit" value="add to cart">
+</form>
 
