@@ -4,3 +4,11 @@
     <li> <%= c %> </li><br>
   <% end %>
 </ul>
+
+<h3> Add another item to your cart: </h3>
+<br>
+<form action="/add" method="POST">  
+  <label>Item name:</label><br>
+  <input type="text" name="product"><br>
+  <input type="submit" value="add to cart">
+</form>
