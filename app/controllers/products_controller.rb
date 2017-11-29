@@ -4,6 +4,6 @@ class ProductsController < ApplicationController
   end
 
   def add
-    raise params.insepct
+    new_item = params[:product]
   end
 end
